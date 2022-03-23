@@ -16,7 +16,33 @@ const onClickAdd = () => {
   const complateButton = document.createElement("button");
   complateButton.innerText = "完了";
   complateButton.addEventListener("click", () => {
+    //detele
     deleteFromIncomplateList(complateButton.parentNode);
+
+    //add mikanryo
+    const addTarget = complateButton.parentNode;
+
+    //TODO no Naiyou text
+    const text = addTarget.firstElementChild.innerText;
+
+    //div ika wo shokika
+    addTarget.textContent = null;
+
+    //Li
+    const li = document.createElement("li");
+    li.innerText = text;
+
+    //buttun
+    const backButton = document.createElement("button");
+    backButton.innerText = "戻す";
+
+    //div no children
+
+    addTarget.appendChild(li);
+    addTarget.appendChild(backButton);
+
+    //complate-list ni add
+    document.getElementById("complate-list").appendChild(addTarget);
   });
 
   //button delete
