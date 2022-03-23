@@ -35,6 +35,9 @@ const onClickAdd = () => {
     //buttun
     const backButton = document.createElement("button");
     backButton.innerText = "戻す";
+    backButton.addEventListener("click", () => {
+      //button delete
+    });
 
     //div no children
 
